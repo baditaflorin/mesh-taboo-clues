@@ -7,6 +7,7 @@ describe("Taboo clues", () => {
   it("rotates cards deterministically", () => {
     expect(cardForRound(0)).toBe(CARDS[0]);
     expect(cardForRound(CARDS.length)).toBe(CARDS[0]);
+    expect(cardForRound(-1)).toBe(CARDS[1]);
   });
   it("renders shared game", () => {
     render(<Feature room={createMockRoom()} config={config} />);
